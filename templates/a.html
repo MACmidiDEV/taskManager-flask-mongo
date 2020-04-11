@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="content-type" content="text/html;charset=utf-8">
+        <style type="text/css">
+            #meet {
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                width: 100%;
+                height: 100%;
+                overflow: hidden;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="meet"></div>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <h1>MAC</h1>
+        <!-- <script src="jitsi-meet.js"></script> -->
+        <script src='https://meet.jit.si/external_api.js'></script>
+        <script type="text/javascript">
+            const domain = 'meet.jit.si';
+            const options = {
+                roomName: 'ToodlerLearning',
+                parentNode: document.querySelector('#meet')
+            };
+            const api = new JitsiMeetExternalAPI(domain, options);
+        </script>
+        <!-- <script>
+            var meet = new JitsiMeet('https://meet.jit.si');
+            meet.on('ready', function() {
+                var interfaceConfig = {
+                    TOOLBAR_BUTTONS: ['microphone', 'camera', 'desktop', 'fullscreen', 'hangup', 'settings'],
+                    SETTINGS_SECTIONS: ['language', 'devices'],
+                    DEFAULT_REMOTE_DISPLAY_NAME: 'John Doe',
+                };
+                var options = {};
+                options.interfaceConfig = interfaceConfig;
+                var conference = meet.join('Testing', '#meet', options);
+                conference.on('joined', function() {
+                    console.log('We are in!');
+                });
+            });
+        </script> -->
+    </body>
+</html>

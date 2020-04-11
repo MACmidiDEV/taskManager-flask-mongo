@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+	<link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
+
+	<meta charset="UTF-8">
+	<title>MAC</title>
+	<style>
+		footer {
+			/* position: absolute; */
+			width: 100%;
+			margin: 0%;
+			padding: 0%;
+		}
+
+		.space {
+			height: 40em;
+			/* padding-bottom: 64px; */
+		}
+
+		#meet {
+			/* position: relative; */
+			bottom: 0;
+			right: 0;
+			width: 100%;
+			height: 100%;
+			overflow: hidden;
+			/* margin-top: 64px; */
+
+		}
+
+		.task_header {
+			font-size: larger;
+			margin-left: 50px;
+			margin-top: 1px;
+		}
+
+		.sidenav {
+			/* background-image: url("https://images.unsplash.com/photo-1520168361367-c8080c2d20fc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80"); */
+			/* background-image: url("https://images.unsplash.com/photo-1578852612716-854e527abf2e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80"); */
+			background-color: rgba(150, 68, 80, 0.899);
+		}
+
+		.sticky-action {
+			position: fixed;
+			z-index: 10;
+		}
+
+		@media only screen and (min-width: 993px) {
+			nav a.sidenav-trigger {
+				display: inline;
+			}
+		}
+	</style>
+</head>
+
+<body>
+
+
+	<header>
+		<!-- navbar content here  -->
+		<nav class="navbar sticky-action navbar-expand-lg navbar-light bg-light">
+			<ul class="nav justify-content-center">
+				<li class="nav-item">
+					<a class="nav-link active" href="/">Task Manager</a>
+				</li>
+
+				<li class="nav-item">
+					<a class="nav-link" href="/get_categories">Categories</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="/add_task">addTask</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="/add_category">addCategory</a>
+				</li>
+			</ul>
+
+			<a href="#" data-target="slide-out" class="right sidenav-trigger"><i class="material-icons">menu</i></a>
+
+		</nav>
+
+		<ul id="slide-out" class="sidenav right">
+			<li>
+				<div class="user-view">
+					<div class="background sideNav">
+						<img
+							src="https://images.unsplash.com/photo-1520168361367-c8080c2d20fc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80">
+					</div>
+					<a href="#user"><img class="circle"
+							src="https://images.unsplash.com/photo-1578852612716-854e527abf2e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80"></a>
+					<a href="#name"><span class="white-text name">John Doe</span></a>
+					<a href="#email"><span class="white-text email">jdandturk@gmail.com</span></a>
+				</div>
+			</li>
+			<li><a href="#!"><i class="material-icons">cloud</i>First Link With Icon</a></li>
+			<li><a href="#!">Second Link</a></li>
+			<li>
+				<div class="divider"></div>
+			</li>
+			<li><a class="subheader">Subheader</a></li>
+			<li><a class="waves-effect" href="#!">Third Link With Waves</a></li>
+		</ul>
+
+	</header>
+
+
+
+	<div class="parallax-container">
+		<br><br><br><br>
+
+
+		<div class="parallax"><img
+				src="https://images.unsplash.com/photo-1520168361367-c8080c2d20fc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80">
+		</div>
+	</div>
+
+
+	<div class="section white">
+		<div class="row container">
+			<h2 class="header">Parallax</h2>
+			<p class="grey-text text-darken-3 lighten-3">Parallax is an effect where the background content or image in
+				this case, is moved at a different speed than the foreground content while scrolling.</p>
+		</div>
+	</div>
+	<div class="parallax-container">
+		<div class="parallax"><img
+				src="https://images.unsplash.com/photo-1578852612716-854e527abf2e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80">
+		</div>
+	</div>
+
+
+	<h1>MACbase</h1>
+	<div class="container">
+
+		<nav class="navbar navbar-expand-lg navbar-light bg-light">
+			<ul class="nav justify-content-center">
+				<li class="nav-item">
+					<a class="nav-link active" href="/">Tasks</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="/get_categories">Categories</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="/add_task">addTask</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="/add_category">addCategory</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="/vid">Video</a>
+				</li>
+			</ul>
+		</nav>
+
+
+		{% block content %}
+		{% endblock %}
+
+
+		<footer>
+			<!-- <div class="space">
+				<br><br><br><br>
+				<div id="meet"></div>
+				<br><br><br>
+				</div> -->
+			<h1>MAC</h1>
+		</footer>
+
+	</div>
+	<div class="space">
+		<div class="space">
+			<div id="meet"></div>
+		</div>
+	</div>
+
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"
+		integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+	<script>
+		$(document).ready(function () {
+			$('.collapsible').collapsible();
+			$('.parallax').parallax();
+			$('.sidenav').sidenav();
+			$('.button-collapse').sideNav();
+			$('select').formSelect();
+			$('.datepicker').datepicker();
+
+
+		});
+		$('.datepicker').pickadate({
+			selectMonths: true,
+			selectYears: 15,
+			today: 'Today',
+			clear: 'Clear',
+			close: 'ok',
+			closeOnSelect: false
+		});
+	</script>
+
+	<script src='https://meet.jit.si/external_api.js'></script>
+
+	<script type="text/javascript">
+		const domain = 'meet.jit.si';
+		const options = {
+			roomName: 'ToodlerLearning',
+			// width: 900,
+			// height: 900,
+			parentNode: document.querySelector('#meet')
+		};
+		const api = new JitsiMeetExternalAPI(domain, options);
+	</script>
+
+</body>
+
+</html>
