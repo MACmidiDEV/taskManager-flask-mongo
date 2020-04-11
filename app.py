@@ -97,7 +97,9 @@ def update_category(category_id):
     )
     return redirect(url_for('get_categories'))
 
-
+@app.route('/vid')
+def vid():
+    return render_template("vid.html")
 
 
 if __name__ == '__main__':
