@@ -15,7 +15,7 @@
         <div class="row">    
           <div class="input-field col s11">
             <i class="material-icons prefix">poll</i>
-            <select id="category" name ="category_name">
+            <select id="category_name" name ="category_name">
               <option value="" disabled selected>Choose Cateorgy</option>
               {% for cat in categories %}
               <option value="{{ cat.category_name }}">{{ cat.category_name }}</option>            
