@@ -1,31 +1,141 @@
 {% extends 'base.html' %}
 {% block content %}
-	
-	<!-- <div class="container"> -->
-		<div class="parallax-container">
-			
-	
-	
-			<div class="parallax"><img
-					src="https://images.unsplash.com/photo-1520168361367-c8080c2d20fc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80">
-			</div>
-		</div>
-	
-	
-		<div class="section white">
-			<div class="row container">
-				<h2 class="header">Parallax</h2>
-				<p class="grey-text text-darken-3 lighten-3">Parallax is an effect where the background content or image in
-					this case, is moved at a different speed than the foreground content while scrolling.</p>
-			</div>
-		</div>
-		<div class="parallax-container">
-			<div class="parallax"><img
-					src="https://images.unsplash.com/photo-1578852612716-854e527abf2e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80">
-			</div>
-		</div>
+
+<style>
+	.card .card-reveal {
+
+	}
+	#landBg1 {
+		/* display: none; */
+		background-size: cover;
+		/* background-position: bottom; */
+	}
+
+	.hero {
+		height: 500px;
+	}
+
+	.clearfix {
+		margin-top: 0;
+	}
+
+	.jumbotron-wrapper {
+		background-color: black;
+	}
+
+	.jumbotron {
+		margin-top: 0;
+		width: 100%;
+		background-image: url('https://images.unsplash.com/photo-1533499966477-9333968a4e28?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80');
+		background-size: cover;
+	}
+</style>
+
+<!-- <h1>MAC</h1> -->
+<!-- 
+<div class="page-header header-filter" data-parallax="true"
+        style="background-image: url('https://images.unsplash.com/photo-1533499966477-9333968a4e28?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80')">
+        
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 ml-auto mr-auto">
+                    <div class="brand text-center">
+                        <h1>First Clicks </h1>
+                        <h3 class="title text-center">A Toodler Learning Portal</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+ -->
+
+ 
 
 
-	<!-- </div> -->
-	
+ <div class="jumbotron">
+	<br><br><br><br><br><br><br>
+	<div class="container center-align" id="jumbotron-wrapper">
+		<br><br><br><br><br><br><br>
+		<h1 class="display-4 clearfix row">Hello, world!</h1>
+		<p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to
+			featured content or information.</p>
+			<br><br><br><br><br>
+
+			<div class="card">
+				<div class="card-image waves-effect waves-block waves-light">
+				  <img class="activator" src="/static/img/stem.jpg">
+				</div>
+				<div class="card-content">
+				  <span class="card-title activator grey-text text-darken-4">Card Title<i class="material-icons right">more_vert</i></span>
+				  <p><a href="#">This is a link</a></p>
+				</div>
+				<div class="card-reveal">
+				  <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
+				  <p>Here is some more information about this product that is only revealed once clicked on.</p>
+				  <br>
+				  <div><h1>MAC</h1></div>
+				</div>
+			  </div>
+
+
+		<br><br><br><br><br>
+		<p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+		<a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+		<br><br><br><br><br><br><br><br>
+	</div>
+
+</div>
+
+
+<div class="parallax-container">
+
+
+
+	<div class="parallax hero">
+
+		<img src="/static/img/paul1.jpg" style="height:600px; margin-top:100px">
+	</div>
+</div>
+
+
+<div class="parallax-container section white">
+	<div class="row container">
+		<h2 class="header">Parallax</h2>
+		<p class="grey-text text-darken-3 lighten-3">Parallax is an effect where the background content or image in
+			this case, is moved at a different speed than the foreground content while scrolling.</p>
+	</div>
+</div>
+<div class="parallax-container">
+	<div class="parallax"><img src="/static/img/annie3.jpg">
+	</div>
+
+
+</div>
+
+
+
+
+
+<div class="row" id="callout">
+	<div class="parallax-container">
+		<div class="parallax"><img src="/static/img/markus1.jpg" style="height:400px; margin-top:00px">
+		</div>
+	</div>
+</div>
+
+
+<div class="parallax-container section white">
+	<div class="row container">
+		<h2 class="header">Parallax</h2>
+		<p class="grey-text text-darken-3 lighten-3">Parallax is an effect where the background content or image in
+			this case, is moved at a different speed than the foreground content while scrolling.</p>
+	</div>
+</div>
+<div class="parallax-container">
+	<div class="parallax"><img
+			src="https://github.com/MACmidiDEV/taskManager-flask-mongo/blob/master/static/img/agence.jpg?raw=true">
+	</div>
+</div>
+
+
 {% endblock %}

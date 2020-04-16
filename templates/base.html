@@ -11,12 +11,15 @@
 	<meta charset="UTF-8">
 	<title>MAC</title>
 	<style>
-		footer {
-			/* position: absolute; */
-			width: 100%;
-			margin: 0%;
-			padding: 0%;
+		.inject .navbar {
+			visibility: hidden;
 		}
+
+		.sticky-action {
+			background-color: rgb(127, 172, 74, 0.65);
+		}
+
+		.page-footer {}
 
 		.space {
 			height: 40em;
@@ -36,7 +39,7 @@
 
 		.task_header {
 			font-size: larger;
-			margin-left: 35px;
+			margin-left: 50px;
 			margin-top: 1px;
 		}
 
@@ -62,6 +65,7 @@
 <body>
 
 
+
 	<header>
 		<!-- navbar content here  -->
 		<nav class="navbar sticky-action navbar-expand-lg navbar-light bg-light">
@@ -70,15 +74,7 @@
 					<a class="nav-link active" href="/">Task Manager</a>
 				</li>
 
-				<li class="nav-item">
-					<a class="nav-link" href="/get_categories">Categories</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="/add_task">addTask</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="/add_category">addCategory</a>
-				</li>
+
 			</ul>
 
 			<a href="#" data-target="slide-out" class="right sidenav-trigger"><i class="material-icons">menu</i></a>
@@ -108,44 +104,34 @@
 		</ul>
 
 	</header>
-	<br><br>
 
-	<div class="container">
-
-		<nav class="navbar navbar-expand-lg navbar-light bg-light">
-			<ul class="nav justify-content-center">
-				<li class="nav-item">
-					<a class="nav-link active" href="/get_tasks">Tasks</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="/get_categories">Categories</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="/add_task">addTask</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="/add_category">addCategory</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="/vid">Video</a>
-				</li>
-			</ul>
-		</nav>
-
-
-
+	<div class="fixed-action-btn ">
+		<a class="btn-floating btn-large red click-to-toggle">
+			<i class="large material-icons">open_in_new</i>
+		</a>
+		<ul>
+			<li><a href="/landing" class="btn-floating red"><i class="material-icons">home</i></a></li>
+			<li><a href="/add_task" class="btn-floating green"><i class="material-icons">add_comment</i></a></li>
+			<li><a href="/add_category" class="btn-floating green darken-100"><i
+						class="material-icons">library_add</i></a></li>
+			<li><a href="/get_categories" class="btn-floating yellow lighten-900"><i
+						class="material-icons">chrome_reader_mode</i></a></li>
+			<li><a href="/get_tasks" class="btn-floating yellow"><i class="material-icons">subscriptions</i></a></li>
+			<li><a href="/vid" class="btn-floating purple"><i class="material-icons">tv</i></a></li>
+		</ul>
 	</div>
-	<!-- <div class="space">
-		<div class="space">
-			<div id="meet"></div>
-		</div>
-	</div> -->
 
 
-	{% block content %}
-	{% endblock %}
 
 
+	{% block content %}{% endblock %}
+	<footer class="page-footer">
+		<a href="#footer"></a>
+		<div class="footer-copyright">
+			<div class="container center">
+				<a class="grey-text text-lighten-4" href="#!">© 2020 MAC|media Software Solutions</a>
+			</div>
+	</footer>
 
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"
@@ -153,8 +139,14 @@
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
+
+
 	<script>
 		$(document).ready(function () {
+			$('.fixed-action-btn').floatingActionButton({
+				hoverEnabled: false
+			});
+
 			$('.collapsible').collapsible();
 			$('.parallax').parallax();
 			$('.sidenav').sidenav();
@@ -164,6 +156,7 @@
 
 
 		});
+
 		$('.datepicker').pickadate({
 			selectMonths: true,
 			selectYears: 15,
@@ -180,12 +173,14 @@
 		const domain = 'meet.jit.si';
 		const options = {
 			roomName: 'ToodlerLearning',
-			// width: 900,
-			// height: 900,
+			// width: 300,
+			// height: 300,
 			parentNode: document.querySelector('#meet')
 		};
 		const api = new JitsiMeetExternalAPI(domain, options);
 	</script>
+
+
 
 </body>
 
