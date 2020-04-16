@@ -19,15 +19,17 @@
 		margin-top: 0;
 	}
 
-	.jumbotron-wrapper {
-		background-color: black;
+	#jumbotron-wrapper-text p {
+		background-color: #0000007a;
+        color:#bfa333;;
 	}
 
 	.jumbotron {
 		margin-top: 0;
 		width: 100%;
-		background-image: url('https://images.unsplash.com/photo-1533499966477-9333968a4e28?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80');
+		background-image: url('https://images.unsplash.com/photo-1489702932289-406b7782113c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1052&q=80');
 		background-size: cover;
+        background-position:center;
 	}
     select {
         display: inline;
@@ -35,42 +37,7 @@
 </style>
 
 
- 
 
-
- <div class="jumbotron">
-	<br><br><br><br><br><br><br>
-	<div class="container center-align" id="jumbotron-wrapper">
-		<br><br><br><br><br><br><br>
-		<h1 class="display-4 clearfix row">Hello, world!</h1>
-		<p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to
-			featured content or information.</p>
-			<br><br><br><br><br>
-
-			<div class="card">
-				<div class="card-image waves-effect waves-block waves-light">
-				  <img class="activator" src="/static/img/stem.jpg">
-				</div>
-				<div class="card-content">
-				  <span class="card-title activator grey-text text-darken-4">Card Title<i class="material-icons right">more_vert</i></span>
-				  <p><a href="#">This is a link</a></p>
-				</div>
-				<div class="card-reveal">
-				  <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
-				  <p>Here is some more information about this product that is only revealed once clicked on.</p>
-				  <br>
-				  <div><h1>MAC</h1></div>
-				</div>
-			  </div>
-
-
-		<br><br><br><br><br>
-		<p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-		<a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
-		<br><br><br><br><br><br><br><br>
-	</div>
-
-</div>
 
 
 <div class="parallax-container">
@@ -99,7 +66,15 @@
 </div>
 
 
-
+ <div class="jumbotron">
+	<br><br><br><br><br><br>
+	<div class="container center-align" id="jumbotron-wrapper">		
+        <div class="jumbotron-wrapper-text">
+		<p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+		<a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+        </div> 
+	</div>
+  </div>
 
 
 <div class="row" id="callout">
