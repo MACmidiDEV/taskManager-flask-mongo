@@ -2,9 +2,25 @@
 {% block content %}
 
 <style>
-	.card .card-reveal {
-
+	.callout {
+		position: absolute;
+		right: 2rem;
+		top: 4rem;
+		width: 320px;
+		text-align: center;
+		background-color: rgba(105, 94, 164, 0.43);
+		/* height: 800px; */
+		border: 4px solid #000000;
+		border-radius: 1.5em;
+		overflow: hidden;
+		padding: 5%;
+		margin: 2.5%;
+		border-top: none;
+		border-bottom: none;
 	}
+
+	.card .card-reveal {}
+
 	#landBg1 {
 		/* display: none; */
 		background-size: cover;
@@ -21,7 +37,8 @@
 
 	#jumbotron-wrapper-text p {
 		background-color: #0000007a;
-        color:#bfa333;;
+		color: #bfa333;
+		;
 	}
 
 	.jumbotron {
@@ -29,15 +46,24 @@
 		width: 100%;
 		background-image: url('https://images.unsplash.com/photo-1489702932289-406b7782113c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1052&q=80');
 		background-size: cover;
-        background-position:center;
+		background-position: center;
 	}
-    select {
-        display: inline;
-    }
+
+	select {
+		display: inline;
+	}
 </style>
 
 
-
+<div class="callout">
+	<div class="info-text">
+		<h1>LEARN</h1>
+		<hr>
+		<a href="TLP"></a>
+		<br><br>
+		<p>Toddler Learning</p>
+	</div>
+</div>
 
 
 <div class="parallax-container">
@@ -66,18 +92,18 @@
 </div>
 
 
- <div class="jumbotron">
+<div class="jumbotron">
 	<br><br><br><br><br><br>
-	<div class="container center-align" id="jumbotron-wrapper">		
-        <div class="jumbotron-wrapper-text">
-		<p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-		<a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
-		</div> 
+	<div class="container center-align" id="jumbotron-wrapper">
+		<div class="jumbotron-wrapper-text">
+			<p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+			<a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+		</div>
 		<!-- <div class="row"> -->
-			<h1>mac</h1>
+		<h1>mac</h1>
 		<!-- </div> -->
 	</div>
-  </div>
+</div>
 
 
 <div class="row" id="callout">

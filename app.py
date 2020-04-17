@@ -97,11 +97,11 @@ def update_category(category_id):
 def vid():
     return render_template("vid.html")
 
-
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP'),
-            port=5500,
-            debug=True)
+            port=(os.environ.get('PORT')),
+            debug=False)
+
 
 
 
