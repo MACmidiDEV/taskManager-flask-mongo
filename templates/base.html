@@ -9,7 +9,7 @@
 	<link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
 
 	<meta charset="UTF-8">
-	<title>MAC</title>
+	<title>Toodler Learning</title>
 	<style>
 		.inject .navbar {
 			visibility: hidden;
@@ -45,7 +45,7 @@
 
 		.sidenav {
 			/* background-image: url("https://images.unsplash.com/photo-1520168361367-c8080c2d20fc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80"); */
-			/* background-image: url("https://images.unsplash.com/photo-1578852612716-854e527abf2e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80"); */
+			background-image: url("https://images.unsplash.com/photo-1578852612716-854e527abf2e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80");
 			background-color: rgba(150, 68, 80, 0.899);
 		}
 
@@ -53,7 +53,11 @@
 			position: fixed;
 			z-index: 10;
 		}
-
+		
+		.collapsible-header {
+		background-color: rgba(130, 163, 45, 0.39);
+		}
+		
 		@media only screen and (min-width: 993px) {
 			nav a.sidenav-trigger {
 				display: inline;
@@ -71,7 +75,7 @@
 		<nav class="navbar sticky-action navbar-expand-lg navbar-light bg-light">
 			<ul class="nav justify-content-center">
 				<li class="nav-item">
-					<a class="nav-link active" href="/">Task Manager</a>
+					<a class="nav-link active" href="/">ToddlerLearning</a>
 				</li>
 
 
@@ -81,26 +85,46 @@
 
 		</nav>
 
-		<ul id="slide-out" class="sidenav right">
+		<ul id="slide-out" class="sidenav">
 			<li>
 				<div class="user-view">
 					<div class="background sideNav">
 						<img
 							src="https://images.unsplash.com/photo-1520168361367-c8080c2d20fc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80">
 					</div>
-						<a href="#user"><img class="circle"
+					<a href="#user"><img class="circle"
 							src="https://images.unsplash.com/photo-1578852612716-854e527abf2e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80"></a>
-							<a href="#name"><span class="white-text name">John Doe</span></a>
-							<a href="#email"><span class="white-text email">jdandturk@gmail.com</span></a>
-					</div>
+					<a href="#name"><span class="white-text name">liveLearn</span></a>
+					<a href="#email"><span class="white-text email">MACmidi.webDesigns@gmail.com</span></a>
+				</div>
 			</li>
-			<li><a href="#!"><i class="material-icons">cloud</i>First Link With Icon</a></li>
+			<li><a href="#!"><i class="material-icons">tv</i>liveLearn for Toddlers</a></li>
 			<li><a href="#!">Second Link</a></li>
 			<li>
 				<div class="divider"></div>
 			</li>
 			<li><a class="subheader">Subheader</a></li>
 			<li><a class="waves-effect" href="#!">Third Link With Waves</a></li>
+
+			<ul class="collapsible collapsible-accordion">
+				<li>
+					<a class="collapsible-header">
+						<i class="material-icons">arrow_drop_down</i>Categories
+						<i class="material-icons">chrome_reader_mode</i>
+					</a>
+					<div class="collapsible-body">
+						<ul>
+						
+							<li><a href="#!">First</a></li>
+							<li><a href="#!">Second</a></li>
+							<li><a href="#!">Third</a></li>
+							<li><a href="#!">Fourth</a></li>
+						</ul>
+					</div>
+				</li>
+			</ul>
+			</li>
+		</ul>
 		</ul>
 
 	</header>
@@ -110,7 +134,7 @@
 			<i class="large material-icons">open_in_new</i>
 		</a>
 		<ul>
-			<li><a href="/landing" class="btn-floating red"><i class="material-icons">home</i></a></li>
+			<li>home<a href="/" class="btn-floating red"><i class="material-icons">home</i></a></li>
 			<li><a href="/add_task" class="btn-floating green"><i class="material-icons">add_comment</i></a></li>
 			<li><a href="/add_category" class="btn-floating green darken-100"><i
 						class="material-icons">library_add</i></a></li>
@@ -145,19 +169,19 @@
 	<script>
 		$(document).ready(function () {
 
-            $('select').formSelect();
+			$('select').formSelect();
 
 
 			$('.fixed-action-btn').floatingActionButton({
 				hoverEnabled: false
 			});
 
-            
+
 			$('.collapsible').collapsible();
 			$('.parallax').parallax();
 			$('.sidenav').sidenav();
 			$('.button-collapse').sideNav();
-			
+
 			$('.datepicker').datepicker();
 
 

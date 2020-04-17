@@ -1,13 +1,19 @@
 {% extends 'base.html' %}
 {% block content %}
 
+<style>
+	body {
+		background-image: url("https://images.unsplash.com/photo-1578852612716-854e527abf2e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80");
+		
+	}
+</style>
 
 <div class="inject">
 	<nav class="navbar navbar-expand-lg navbar-light bg-dark">
 	</nav>
   </div>
 	
-	<!-- <div class="container"> -->
+	<div class="container">
 		<div class="row">
 			
 			<ul class="collapsible popout">
@@ -34,12 +40,18 @@
 								</span>
 								{{task.task_description}}
 							</span>
+							<div class="video-container">
+								<iframe width="auto" height="auto" src="{{task.task_vid}}" frameborder="0"
+								allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+								allowfullscreen></iframe>
+							</div>
 						</div>
 						<br>
 					</li>
 				{% endfor %}
 			</ul>
 		</div>
-	<!-- </div> -->
+	</div>
 	<h1>taskDB</h1>
 {% endblock %}
+
