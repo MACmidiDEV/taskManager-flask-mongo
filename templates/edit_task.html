@@ -1,26 +1,33 @@
 
 {% extends 'base.html'%} {% block content %}
 
-<h3>Edit Task</h3>
-<div class="row">
+
+<div class="inject">
+  <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+  </nav>
+</div>
+
+<div class="container">
     <form action="{{ url_for('update_task', task_id=task._id) }}" method="POST" class="col s12">
-        <div class="row">
-            <div class="row">
-                <div class="input-field col s12">
-                    <i class="material-icons prefix">poll</i>
-                    <select id="category" name="category_name">
-                  <option value="" disabled selected>Choose Category</option>
-                  {% for cat in categories %}
-                      {% if cat.category_name == task.category_name %}
-                      <option value="{{cat.category_name}}" selected>{{cat.category_name}}</option>
-                      {% else %}
-                      <option value="{{cat.category_name}}">{{cat.category_name}}</option>
-                    {% endif %}
-                  {% endfor %}
-                </select>
-                    <label>Task Category</label>
-                </div>
-            </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <i class="material-icons prefix">poll</i>
+          <select id="category" name="category_name">
+            <option value="" disabled selected>Choose Category</option>
+            {% for cat in categories %}
+            {% if cat.category_name == task.category_name %}
+            <option value="{{cat.category_name}}" selected>{{cat.category_name}}</option>
+            {% else %}
+            <option value="{{cat.category_name}}">{{cat.category_name}}</option>
+            {% endif %}
+            {% endfor %}
+          </select>
+          <label>Task Category</label>
+        </div>
+      </div>
+      
+      
+      <div class="row">
             <div class="input-field col s12">
                 <i class="material-icons prefix">assignment</i>
                 <input id="task_name" name="task_name" type="text" value="{{task.task_name}}">
