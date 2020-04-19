@@ -15,6 +15,9 @@
 			visibility: hidden;
 		}
 
+		.sticky-action {
+			background-color: rgb(127, 172, 74, 0.65);
+		}
 
 		.page-footer {}
 
@@ -47,22 +50,12 @@
 		}
 
 		.sticky-action {
-			background-color: rgba(74, 80, 172, 0.94);
 			position: fixed;
 			z-index: 10;
 		}
-
-
-
-
-
-		.brand-logo:hover {
-			
-			box-shadow: rgba(0, 0, 0, 0.14) 0px 2px 2px 0px, rgba(0, 0, 0, 0.12) 0px 3px 1px -2px, rgba(0, 0, 0, 0.2) 0px 1px 5px 0px
-		}
-
+		
 		.collapsible-header {
-			background-color: rgba(130, 163, 45, 0.39);
+		background-color: rgba(130, 163, 45, 0.39);
 		}
 
 		@media only screen and (min-width: 993px) {
@@ -81,11 +74,11 @@
 		<nav class="navbar sticky-action navbar-expand-lg navbar-light bg-light">
 			<ul class="nav justify-content-center">
 				<li class="nav-item">
-					<a class="brand-logo nav-link active" href="/">Toddler<span><small>Learning</small></span></a>
+					<a class="nav-link active" href="/">Toddler<span><small>Learning</small></span></a>
 				</li>
 			</ul>
 
-			<a href="#" data-target="slide-out" class="right sidenav-trigger"><i class="material-icons">menu</i></a>
+			<a href="#" data-target="mobile-menue" class="right sidenav-trigger"><i class="material-icons">menu</i></a>
 
 		</nav>
 
@@ -118,7 +111,7 @@
 					</a>
 					<div class="collapsible-body">
 						<ul>
-
+						
 							<li><a href="#!">First</a></li>
 							<li><a href="#!">Second</a></li>
 							<li><a href="#!">Third</a></li>
@@ -134,18 +127,18 @@
 	</header>
 
 	<div class="fixed-action-btn ">
-		<a class="btn-floating btn-large purple click-to-toggle">
+		<a class="btn-floating btn-large red click-to-toggle">
 			<i class="large material-icons">open_in_new</i>
 		</a>
 		<ul>
-			<li><a href="/" class="btn-floating red"><i class="material-icons">home</i></a></li>
+			<li>home<a href="/" class="btn-floating red"><i class="material-icons">home</i></a></li>
 			<li><a href="/add_task" class="btn-floating green"><i class="material-icons">add_comment</i></a></li>
 			<li><a href="/add_category" class="btn-floating green darken-100"><i
 						class="material-icons">library_add</i></a></li>
 			<li><a href="/get_categories" class="btn-floating yellow lighten-900"><i
 						class="material-icons">chrome_reader_mode</i></a></li>
 			<li><a href="/get_tasks" class="btn-floating yellow"><i class="material-icons">subscriptions</i></a></li>
-			<li><a href="/vid" class="btn-floating red"><i class="material-icons">tv</i></a></li>
+			<li><a href="/vid" class="btn-floating purple"><i class="material-icons">tv</i></a></li>
 		</ul>
 	</div>
 
@@ -159,11 +152,9 @@
 			<div class="container center">
 				<br>
 				<a class="grey-text text-lighten-4" href="#!">© 2020 MAC|media Software Solutions ©</a>
-				<br><br><br>
 			</div>
 	</footer>
 
-	<!-- <br><br><br><br> -->
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"
 		integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
@@ -185,8 +176,8 @@
 
 			$('.collapsible').collapsible();
 			$('.parallax').parallax();
-			// $('.button-collapse').sideNav();
 			$('.sidenav').sidenav();
+			$('.button-collapse').sideNav();
 
 			$('.datepicker').datepicker();
 

@@ -18,7 +18,7 @@
 			
 			<ul class="collapsible popout">
 				{% for task in tasks %}
-					<li>
+					<li class="active">
 						<div class="collapsible-header">
 							<div class="col s3">
 								<i class="material-icons">verified_user</i>
@@ -41,9 +41,11 @@
 								{{task.task_description}}
 							</span>
 							<div class="video-container">
+								
 								<iframe width="auto" height="auto" src="{{task.task_vid}}" frameborder="0"
 								allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
 								allowfullscreen></iframe>
+								
 							</div>
 						</div>
 						<br>
@@ -52,6 +54,5 @@
 			</ul>
 		</div>
 	</div>
-	<h1>taskDB</h1>
 {% endblock %}
 

@@ -2,6 +2,32 @@
 {% block content %}
 
 <style>
+
+	.img-overlay {
+		position: relative;
+		/* overflow: visable; */
+	}
+
+	.s3-img-effect {
+		top: -620px;
+	}
+
+	#s3-wrap-text {
+		background-color: #ffffff7a;
+	}
+
+	#s5-wrap-text {
+		background-color: #ffffff7a;
+		width: 40%;
+		margin-left: 2%;
+	}
+
+	#s7-wrap-text {
+		background-color: #ffffff7a;
+		width: 40%;
+		margin-left: 2%;
+	}
+
 	.callout {
 		position: absolute;
 		right: 2rem;
@@ -28,7 +54,7 @@
 	}
 
 	.hero {
-		height: 500px;
+		height: 425px;
 	}
 
 	.clearfix {
@@ -38,15 +64,18 @@
 	#jumbotron-wrapper-text p {
 		background-color: #0000007a;
 		color: #bfa333;
-		;
+		
 	}
 
 	.jumbotron {
-		margin-top: 0;
-		width: 100%;
+		margin: 0 auto;
+		margin-top: 2em;
+		width: 50%;
 		background-image: url('https://images.unsplash.com/photo-1489702932289-406b7782113c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1052&q=80');
 		background-size: cover;
 		background-position: center;
+		background-color: aqua;
+
 	}
 
 	select {
@@ -55,15 +84,6 @@
 </style>
 
 
-<div class="callout">
-	<div class="info-text">
-		<h1>LEARN</h1>
-		<hr>
-		<a href="TLP"></a>
-		<br><br>
-		<p>Toddler Learning</p>
-	</div>
-</div>
 
 
 <div class="parallax-container">
@@ -72,22 +92,74 @@
 
 	<div class="parallax hero">
 
-		<img src="/static/img/paul1.jpg" style="height:600px; margin-top:100px">
+		<img src="/static/img/paul1.jpg" style="height:600px;">
 	</div>
 </div>
+
+
 
 
 <div class="parallax-container section white">
-	<div class="row container">
-		<h2 class="header">Parallax</h2>
-		<p class="grey-text text-darken-3 lighten-3">Parallax is an effect where the background content or image in
-			this case, is moved at a different speed than the foreground content while scrolling.</p>
+	<div class="container row">
+		<!-- Page Heading -->
+		<h4 class="header"> <span><small>parental</small></span>YouTube<span><small>Manager</small></span></h4>
+		<p class="grey-text text-darken-3 lighten-3">Proactively engage in your toddlers learning.</p>
+		<div class="blockQ col-6 offset-s6 right">
+
+			<div class="row">
+				<p> Join us in gathering educational videos that will ingage your childern
+					<span>
+						<blockquote>
+
+							<h5>Help your child develope a passion for learnig and make it <strong>FUN</strong> </h5>
+
+						</blockquote>
+						<p class="right">
+							Lorem ipore neque explicabo adipisci.
+						</p>
+					</span>
+				</p>
+			</div>
+		</div>
+	
+		<img src="/static/img/gautam.jpg" alt="" class="circle responsive-img"/>
 	</div>
 </div>
-<div class="parallax-container">
-	<div class="parallax"><img src="/static/img/annie3.jpg">
-	</div>
 
+
+
+
+<div class="parallax-container">
+
+
+
+
+	<div class="parallax">
+
+
+		<img src="/static/img/annie3.jpg">
+<br><br><br><br><br>
+<br><br><br>
+		<div class="container">
+			<div class="col-12">
+			<div class="card border-0 shadow my-5" id="s3-wrap-text">
+				<div class="card-body p-5">
+					<h1 class="font-weight-light">Fixed Full Page Background Image</h1>
+					<p class="lead">In this snippet, the background image is fixed to the body element. Content on the
+						page will scroll, but the image will remain in a fixed position!</p>
+					
+						<br><br><br><br><br>
+				</div>
+			</div>
+			<br><br><br><br><br>
+			</div>
+		</div>
+<br><br><br><br><br>
+
+
+	
+	</div>
+	<br><br><br><br><br>
 
 </div>
 
@@ -108,24 +180,112 @@
 
 <div class="row" id="callout">
 	<div class="parallax-container">
-		<div class="parallax"><img src="/static/img/markus1.jpg" style="height:400px; margin-top:00px">
+		<div class="parallax col-4" id="">
+			<div class="img-overlay">
+				<div class="col-md-5">
+					<h3>Project One</h3>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium veniam exercitationem expedita
+						laborum at voluptate. Labore, voluptates totam at aut nemo deserunt rem magni pariatur quos perspiciatis
+						atque eveniet unde.</p>
+					<a class="btn btn-primary" href="#">View Project</a>
+			</div>		
+			<img img src="/static/img/markus1.jpg" style="height:1200px; padding-top:100px">	
+			<div class="card border-0 shadow my-5" id="s5-wrap-text" style="overflow: visible;">
+				<div class="card-body p-5" style="padding-bottom: 200px;">
+					<h1 class="font-weight-light">Fixed Full Page Background Image</h1>
+					<p class="lead">In this snippet, the background image is fixed to the body element. Content on the
+						page will scroll, but the image will remain in a fixed position!</p>
+					
+						<!-- <br><br><br><br><br> -->
+				</div>
+			</div>
+
+
 		</div>
 	</div>
 </div>
 
 
-<div class="parallax-container section white">
-	<div class="row container">
-		<h2 class="header">Parallax</h2>
-		<p class="grey-text text-darken-3 lighten-3">Parallax is an effect where the background content or image in
-			this case, is moved at a different speed than the foreground content while scrolling.</p>
+<br><br><br><br><br>
+
+<div class="container">
+	<!-- Project One -->
+	<div class="row">
+	
+
+		</div>
+		<div class="col-md-7">
+			<a href="#">
+				<img style="background-size: 240%;" class="responsive-img rounded mb-3 mb-md-0" src="http://placehold.it/700x300" alt="">
+			</a>
+		</div>
 	</div>
-</div>
-<div class="parallax-container">
-	<div class="parallax"><img
-			src="https://github.com/MACmidiDEV/taskManager-flask-mongo/blob/master/static/img/agence.jpg?raw=true">
-	</div>
+	<!-- /.row -->
+	<!-- <hr> -->
+	<!-- Project Two -->
+	<!-- <div class="row">
+	  <div class="col-md-7">
+		<a href="#">
+		  <img class="img-fluid rounded mb-3 mb-md-0" src="http://placehold.it/700x300" alt="">
+		</a>
+	  </div>
+	  <div class="col-md-5">
+		<h3>Project Two</h3>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, odit velit cumque vero doloremque repellendus distinctio maiores rem expedita a nam vitae modi quidem similique ducimus! Velit, esse totam tempore.</p>
+		<a class="btn btn-primary" href="#">View Project</a>
+	  </div>
+	</div> -->
+	<!-- /.row -->
+	<!-- <hr> -->
+	<!-- Project Three -->
+	<!-- <div class="row">
+	  <div class="col-md-7">
+		<a href="#">
+		  <img class="img-fluid rounded mb-3 mb-md-0" src="http://placehold.it/700x300" alt="">
+		</a>
+	  </div>
+	  <div class="col-md-5">
+		<h3>Project Three</h3>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis, temporibus, dolores, at, praesentium ut unde repudiandae voluptatum sit ab debitis suscipit fugiat natus velit excepturi amet commodi deleniti alias possimus!</p>
+		<a class="btn btn-primary" href="#">View Project</a>
+	  </div>
+	</div> -->
+	<!-- /.row -->
+	<!-- <hr> -->
+	<!-- Project Four -->
+	<!-- <div class="row">
+
+	  <div class="col-md-7">
+		<a href="#">
+		  <img class="img-fluid rounded mb-3 mb-md-0" src="http://placehold.it/700x300" alt="">
+		</a>
+	  </div>
+	  <div class="col-md-5">
+		<h3>Project Four</h3>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo, quidem, consectetur, officia rem officiis illum aliquam perspiciatis aspernatur quod modi hic nemo qui soluta aut eius fugit quam in suscipit?</p>
+		<a class="btn btn-primary" href="#">View Project</a>
+	  </div>
+	</div> -->
+	<!-- /.row -->
+	<!-- <hr> -->
+
+
+<!-- <br><br><br><br><br> -->
 </div>
 
+<div class="parallax-container">
+
+
+
+
+
+
+	<div class="parallax">
+		<img src="https://github.com/MACmidiDEV/taskManager-flask-mongo/blob/master/static/img/agence.jpg?raw=true">
+	
+	<span>MIDI</span>
+</div>
+<br><br><br><br><br><br><br><br><br><br><br><br>
+<h1>MIDI</h1>
 
 {% endblock %}

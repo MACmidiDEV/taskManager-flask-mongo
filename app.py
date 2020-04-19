@@ -48,6 +48,7 @@ def update_task(task_id):
     tasks.update( {'_id': ObjectId(task_id)},
     {
         'task_name':request.form.get('task_name'),
+        'task_vid':request.form.get('task_vid'),
         'category_name':request.form.get('category_name'),
         'task_description': request.form.get('task_description'),
         'due_date': request.form.get('due_date'),
