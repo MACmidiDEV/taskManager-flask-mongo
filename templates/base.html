@@ -9,14 +9,41 @@
 	<link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
 
 	<meta charset="UTF-8">
-	<title>Toodler Learning</title>
+	<title>Link Learning</title>
 	<style>
+		html,
+		body {
+			height: 100%;
+			margin: 0;
+
+		}
+
+		.name {
+			background-color: rgba(74, 80, 172, 0.94);
+			color: white;
+			font-size: 24px !important;
+		}
+
+		#nav-menu {
+			font-size: xx-large;
+		}
+
 		.inject .navbar {
 			visibility: hidden;
 		}
 
+		main {
+			/* padding-bottom: 5.5em; */
+		}
 
-		.page-footer {}
+		.page-footer {
+			position: fixed;
+			height: 4em;
+			bottom: 0;
+			left: 0;
+			right: 0;
+
+		}
 
 		.space {
 			height: 40em;
@@ -42,8 +69,9 @@
 
 		.sidenav {
 			/* background-image: url("https://images.unsplash.com/photo-1520168361367-c8080c2d20fc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80"); */
-			background-image: url("https://images.unsplash.com/photo-1578852612716-854e527abf2e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80");
-			background-color: rgba(150, 68, 80, 0.899);
+			/* background-image: url("https://images.unsplash.com/photo-1578852612716-854e527abf2e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80"); */
+			/* background-image: url("/static/img/sidenav-bg.png"); */
+			/* background-color: rgba(150, 68, 80, 0.899); */
 		}
 
 		.sticky-action {
@@ -57,7 +85,7 @@
 
 
 		.brand-logo:hover {
-			
+
 			box-shadow: rgba(0, 0, 0, 0.14) 0px 2px 2px 0px, rgba(0, 0, 0, 0.12) 0px 3px 1px -2px, rgba(0, 0, 0, 0.2) 0px 1px 5px 0px
 		}
 
@@ -65,9 +93,33 @@
 			background-color: rgba(130, 163, 45, 0.39);
 		}
 
+		sub {
+			/* vertical-align: -45%; */
+		}
+
+		.slideanim {
+			padding-left: 68px;
+			padding-top: 18px;
+			
+		}
+
+		@media only screen and (max-width: 992px) {
+			#brandLogo {
+				left: 0% !important;
+				-webkit-transform: translateX(0%) !important;
+				transform: translateX(0%) !important;
+				margin-left: .5em;
+			}
+		}
+
 		@media only screen and (min-width: 993px) {
 			nav a.sidenav-trigger {
 				display: inline;
+			}
+
+
+			#brandLogo {
+				margin-left: .5em;
 			}
 		}
 	</style>
@@ -79,13 +131,24 @@
 	<header>
 		<!-- navbar content here  -->
 		<nav class="navbar sticky-action navbar-expand-lg navbar-light bg-light">
-			<ul class="nav justify-content-center">
+			<ul class="nav left">
 				<li class="nav-item">
-					<a class="brand-logo nav-link active" href="/">Toddler<span><small>Learning</small></span></a>
+
+					<a class="brand-logo nav-link active" id="brandLogo" href="/">Little<span>
+							<small>LINKS</small></span></a>
+
+							<sub>
+				
+															
+						<i class="material-icons logo slideanim">device_hub</i>
+									
+
+					</sub>
 				</li>
 			</ul>
 
-			<a href="#" data-target="slide-out" class="right sidenav-trigger"><i class="material-icons">menu</i></a>
+			<a href="#" data-target="slide-out" class="right sidenav-trigger"><i class="material-icons"
+					id="nav-menu">menu</i></a>
 
 		</nav>
 
@@ -93,16 +156,14 @@
 			<li>
 				<div class="user-view">
 					<div class="background sideNav">
-						<img
-							src="https://images.unsplash.com/photo-1520168361367-c8080c2d20fc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80">
+						<img href="/vid" src="/static/img/sidenav-bgX.png">
 					</div>
-					<a href="#user"><img class="circle"
-							src="https://images.unsplash.com/photo-1578852612716-854e527abf2e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80"></a>
-					<a href="#name"><span class="white-text name">liveLearn</span></a>
-					<a href="#email"><span class="white-text email">MACmidi.webDesigns@gmail.com</span></a>
+					<a href="/get_tasks"><img class="circle" src="/static/img/sidenav-bgXX.png"></a>
+					<a href="/get_tasks"><span class="red-text name">Learning<span><small>LINKS</small></span></a>
+					<a href="/get_tasks"><span class="red-text name">Click to view managed content</span></a>
 				</div>
 			</li>
-			<li><a href="#!"><i class="material-icons">tv</i>liveLearn for Toddlers</a></li>
+			<li><a href="/vid"><i class="material-icons">tv</i>liveLearn for Toddlers</a></li>
 			<li><a href="#!">Second Link</a></li>
 			<li>
 				<div class="divider"></div>
@@ -116,6 +177,12 @@
 						<i class="material-icons">arrow_drop_down</i>Categories
 						<i class="material-icons">chrome_reader_mode</i>
 					</a>
+
+
+
+
+
+
 					<div class="collapsible-body">
 						<ul>
 
@@ -133,33 +200,38 @@
 
 	</header>
 
-	<div class="fixed-action-btn ">
-		<a class="btn-floating btn-large purple click-to-toggle">
-			<i class="large material-icons">open_in_new</i>
-		</a>
-		<ul>
-			<li><a href="/" class="btn-floating red"><i class="material-icons">home</i></a></li>
-			<li><a href="/add_task" class="btn-floating green"><i class="material-icons">add_comment</i></a></li>
-			<li><a href="/add_category" class="btn-floating green darken-100"><i
-						class="material-icons">library_add</i></a></li>
-			<li><a href="/get_categories" class="btn-floating yellow lighten-900"><i
-						class="material-icons">chrome_reader_mode</i></a></li>
-			<li><a href="/get_tasks" class="btn-floating yellow"><i class="material-icons">subscriptions</i></a></li>
-			<li><a href="/vid" class="btn-floating red"><i class="material-icons">tv</i></a></li>
-		</ul>
-	</div>
+	<main>
+
+
+		<div class="fixed-action-btn ">
+			<a class="btn-floating btn-large purple click-to-toggle">
+				<i class="large material-icons">open_in_new</i>
+			</a>
+			<ul>
+				<li><a href="/" class="btn-floating red"><i class="material-icons">home</i></a></li>
+				<li><a href="/add_task" class="btn-floating green"><i class="material-icons">add_comment</i></a></li>
+				<li><a href="/add_category" class="btn-floating green darken-100"><i
+							class="material-icons">library_add</i></a></li>
+				<li><a href="/get_categories" class="btn-floating yellow lighten-900"><i
+							class="material-icons">chrome_reader_mode</i></a></li>
+				<li><a href="/get_tasks" class="btn-floating yellow"><i class="material-icons">subscriptions</i></a>
+				</li>
+				<li><a href="/vid" class="btn-floating red"><i class="material-icons">tv</i></a></li>
+			</ul>
+		</div>
 
 
 
 
-	{% block content %}{% endblock %}
+		{% block content %}{% endblock %}
+	</main>
 	<footer class="page-footer">
 		<a href="#footer"></a>
 		<div class="footer-copyright">
 			<div class="container center">
-				<br>
+				<!-- <br> -->
 				<a class="grey-text text-lighten-4" href="#!">© 2020 MAC|media Software Solutions ©</a>
-				<br><br><br>
+				<!-- <br><br><br> -->
 			</div>
 	</footer>
 
@@ -179,7 +251,8 @@
 
 
 			$('.fixed-action-btn').floatingActionButton({
-				hoverEnabled: false
+				hoverEnabled: false,
+				direction: 'left'
 			});
 
 
@@ -208,7 +281,7 @@
 	<script type="text/javascript">
 		const domain = 'meet.jit.si';
 		const options = {
-			roomName: 'ToodlerLearning',
+			roomName: 'C1ickLearning001',
 			// width: 300,
 			// height: 300,
 			parentNode: document.querySelector('#meet')
